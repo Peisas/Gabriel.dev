@@ -1,195 +1,251 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gabriel.dev</title>
   <meta name="description" content="Agência digital especializada em sites profissionais, agendas automáticas e páginas de vendas." />
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
-    }body {
-  background: #0f0f0f;
-  color: #ffffff;
-  line-height: 1.6;
-}
+    }
 
-header {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #000, #1a1a1a);
-}
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      line-height: 1.6;
+    }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+    }
 
-header p {
-  max-width: 700px;
-  margin: auto;
-  color: #ccc;
-}
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
+    header p {
+      max-width: 700px;
+      margin: auto;
+      color: #ccc;
+    }
 
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2rem;
-}
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
 
-.card {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-}
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      transition: transform 0.3s;
+    }
 
-.card h3 {
-  margin-bottom: 10px;
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-.price {
-  font-size: 1.8rem;
-  margin: 15px 0;
-}
+    .card h3 {
+      margin-bottom: 10px;
+    }
 
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
-  background: #ffffff;
-  color: #000;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+    .price {
+      font-size: 1.8rem;
+      margin: 15px 0;
+    }
 
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background: #000;
-  color: #aaa;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 14px 22px;
+      background: #ffffff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
 
-/* ANIMAÇÕES */
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 1s ease forwards;
-}
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #000;
+      color: #aaa;
+    }
 
-.delay-1 { animation-delay: .3s; }
-.delay-2 { animation-delay: .6s; }
-.delay-3 { animation-delay: .9s; }
+    /* ANIMAÇÕES */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease forwards;
+    }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    .delay-1 { animation-delay: .3s; }
+    .delay-2 { animation-delay: .6s; }
+    .delay-3 { animation-delay: .9s; }
 
-.skill {
-  margin-bottom: 20px;
-}
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-.skill span {
-  display: block;
-  margin-bottom: 5px;
-}
+    .skill {
+      margin-bottom: 20px;
+    }
 
-.bar {
-  background: #333;
-  border-radius: 10px;
-  overflow: hidden;
-}
+    .skill span {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-.bar div {
-  height: 12px;
-  background: linear-gradient(90deg, #fff, #999);
-  width: 0;
-  animation: loadBar 2s forwards;
-}
+    .bar {
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
 
-@keyframes loadBar {
-  to { width: var(--level); }
-}
+    .bar div {
+      height: 12px;
+      background: linear-gradient(90deg, #fff, #999);
+      width: 0;
+      animation: loadBar 2s forwards;
+    }
 
+    @keyframes loadBar {
+      to { width: var(--level); }
+    }
   </style>
 </head>
-<body>  <header class="fade-up">
-    <h1>Gabriel.dev</h1>
-    <p>Criamos sites profissionais que transformam visitantes em clientes e evitam que você perca vendas por falta de resposta.</p>
-  </header>  <section class="fade-up delay-1">
-    <h2>O que fazemos</h2>
-    <div class="grid">
-      <div class="card">Sites institucionais modernos e responsivos</div>
-      <div class="card">Sites com agenda automática integrada</div>
-      <div class="card">Páginas de vendas e catálogos digitais</div>
-      <div class="card">Integração direta com WhatsApp</div>
+
+<body>
+
+<header class="fade-up">
+  <h1>Gabriel.dev</h1>
+  <p>Criamos sites profissionais que transformam visitantes em clientes e evitam que você perca vendas por falta de resposta.</p>
+</header>
+
+<section class="fade-up delay-1">
+  <h2>O que fazemos</h2>
+  <div class="grid">
+    <div class="card">Sites institucionais modernos e responsivos</div>
+    <div class="card">Sites com agenda automática integrada</div>
+    <div class="card">Páginas de vendas e catálogos digitais</div>
+    <div class="card">Integração direta com WhatsApp</div>
+  </div>
+</section>
+
+<section class="fade-up delay-2">
+  <h2>Projetos desenvolvidos</h2>
+  <div class="grid">
+    <div class="card">Beauty & Shine Studio – Site institucional e catálogo</div>
+    <div class="card">Site de Agenda Automática – Captação de clientes</div>
+    <div class="card">Catálogos digitais promocionais</div>
+    <div class="card">Correções e otimizações de sites</div>
+  </div>
+</section>
+
+<section class="fade-up delay-3">
+  <h2>Planos e Investimento</h2>
+
+  <div class="grid">
+    <!-- PLANO START -->
+    <div class="card">
+      <h3>Plano Start</h3>
+      <p>Ideal para quem está começando</p>
+      <div class="price">R$ 120,00</div>
+      <p>✔ Site institucional<br>✔ Design responsivo<br>✔ Botão WhatsApp</p>
+      <a class="btn"
+        href="https://wa.me/5584999806570?text=Olá%20Gabriel!%20Tenho%20interesse%20no%20Plano%20Start.%20Quero%20um%20site%20profissional%20para%20marcar%20presença%20online%20e%20não%20perder%20clientes.%20Pode%20me%20explicar%20como%20funciona?">
+        Quero esse plano
+      </a>
     </div>
-  </section>  <section class="fade-up delay-2">
-    <h2>Projetos desenvolvidos</h2>
-    <div class="grid">
-      <div class="card">Beauty & Shine Studio – Site institucional e catálogo</div>
-      <div class="card">Site de Agenda Automática – Captação de clientes</div>
-      <div class="card">Catálogos digitais promocionais</div>
-      <div class="card">Correções e otimizações de sites</div>
+
+    <!-- PLANO PROFISSIONAL -->
+    <div class="card">
+      <h3>Plano Profissional</h3>
+      <p>O mais contratado</p>
+      <div class="price">R$ 310,00</div>
+      <p>✔ Site completo<br>✔ Agenda automática<br>✔ SEO básico<br>✔ Suporte inicial</p>
+      <a class="btn"
+        href="https://wa.me/5584999806570?text=Olá%20Gabriel!%20Quero%20o%20Plano%20Profissional.%20Meu%20objetivo%20é%20parar%20de%20perder%20clientes%20por%20falta%20de%20resposta%20e%20ter%20uma%20agenda%20automática%20funcionando%2024h.%20Pode%20me%20passar%20os%20detalhes?">
+        Quero parar de perder clientes
+      </a>
     </div>
-  </section>  <section class="fade-up delay-3">
-    <h2>Planos e Investimento</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Plano Start</h3>
-        <p>Ideal para quem está começando</p>
-        <div class="price">R$ 120,00</div>
-        <p>✔ Site institucional<br>✔ Design responsivo<br>✔ Botão WhatsApp</p>
-        <a class="btn" href="https://wa.me/5584999806570">Solicitar</a>
-      </div><div class="card">
-    <h3>Plano Profissional</h3>
-    <p>O mais contratado</p>
-    <div class="price">R$ 310,00</div>
-    <p>✔ Site completo<br>✔ Agenda automática<br>✔ SEO básico<br>✔ Suporte inicial</p>
-    <a class="btn" href="https://wa.me/5584999806570">Solicitar</a>
+
+    <!-- PLANO PREMIUM -->
+    <div class="card">
+      <h3>Plano Premium</h3>
+      <p>Para negócios que querem vender mais</p>
+      <div class="price">R$ 450,00</div>
+      <p>✔ Página de vendas<br>✔ Catálogo digital<br>✔ Integrações avançadas<br>✔ Prioridade no suporte</p>
+      <a class="btn"
+        href="https://wa.me/5584999806570?text=Olá%20Gabriel!%20Tenho%20interesse%20no%20Plano%20Premium.%20Quero%20um%20site%20estratégico%20para%20vender%20mais,%20com%20página%20de%20vendas%20e%20integrações%20avançadas.%20Vamos%20conversar?">
+        Quero vender mais
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="fade-up">
+  <h2>Habilidades</h2>
+
+  <div class="skill">
+    <span>HTML5</span>
+    <div class="bar"><div style="--level:95%"></div></div>
   </div>
 
-  <div class="card">
-    <h3>Plano Premium</h3>
-    <p>Para negócios que querem vender mais</p>
-    <div class="price">R$ 450,00</div>
-    <p>✔ Página de vendas<br>✔ Catálogo digital<br>✔ Integrações avançadas<br>✔ Prioridade no suporte</p>
-    <a class="btn" href="https://wa.me/5584999806570">Solicitar</a>
+  <div class="skill">
+    <span>CSS3 & Design Responsivo</span>
+    <div class="bar"><div style="--level:90%"></div></div>
   </div>
-</div>
 
-  </section>  <section class="fade-up">
-    <h2>Habilidades</h2>
-    <div class="skill"><span>HTML5</span><div class="bar"><div style="--level:95%"></div></div></div>
-    <div class="skill"><span>CSS3 & Design Responsivo</span><div class="bar"><div style="--level:90%"></div></div></div>
-    <div class="skill"><span>Sites de Agenda Automática</span><div class="bar"><div style="--level:92%"></div></div></div>
-    <div class="skill"><span>Integração com WhatsApp</span><div class="bar"><div style="--level:98%"></div></div></div>
-    <div class="skill"><span>Páginas de Vendas & Catálogos</span><div class="bar"><div style="--level:88%"></div></div></div>
-    <div class="skill"><span>SEO Básico & Performance</span><div class="bar"><div style="--level:80%"></div></div></div>
-  </section>  <footer>
-    <p>📲 WhatsApp: 84 99980-6570 | 📧 gs1247431@gmail.com</p>
-    <p>© 2026 • Gabriel.dev</p>
-  </footer></body>
-                </html>
+  <div class="skill">
+    <span>Sites de Agenda Automática</span>
+    <div class="bar"><div style="--level:92%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Integração com WhatsApp</span>
+    <div class="bar"><div style="--level:98%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>Páginas de Vendas & Catálogos</span>
+    <div class="bar"><div style="--level:88%"></div></div>
+  </div>
+
+  <div class="skill">
+    <span>SEO Básico & Performance</span>
+    <div class="bar"><div style="--level:80%"></div></div>
+  </div>
+</section>
+
+<footer>
+  <p>📲 WhatsApp: 84 99980-6570 | 📧 gs1247431@gmail.com</p>
+  <p>© 2026 • Gabriel.dev</p>
+</footer>
+
+</body>
+</html>
