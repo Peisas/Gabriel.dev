@@ -107,3 +107,17 @@ export default function GabrielDevPortfolio() { return ( <div className="min-h-s
 </div>
 
 ); }
+
+/* ============================= / / style.css (estilizações extras) / / ============================= */
+
+/* Fundo com gradiente moderno */ body { background: radial-gradient(circle at top, #18181b 0%, #09090b 60%); }
+
+/* Efeito glow nos botões */ button { transition: all 0.3s ease-in-out; }
+
+button:hover { box-shadow: 0 0 20px rgba(255,255,255,0.15); transform: translateY(-3px); }
+
+/* Cards com efeito premium */ .premium-card { background: linear-gradient(145deg, #111111, #1c1c1c); border: 1px solid #27272a; backdrop-filter: blur(10px); }
+
+/* Animação suave de fade-in */ .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
